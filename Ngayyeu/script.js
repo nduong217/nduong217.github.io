@@ -123,7 +123,7 @@ function playAudio() {
 }
 
 
-const yourDate = new Date("2024-03-10T00:00:00");
+const yourDate = new Date("2025-01-20T00:00:00");
 
 document.addEventListener("DOMContentLoaded", function () {
   var hoursElement = document.getElementById("hours");
