@@ -34,6 +34,11 @@ function minimizeNotification(button) {
   notification.style.display = 'none'; 
 }
 
+function playAudio() {
+  var audio = document.getElementById("myAudio");
+  audio.play();
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   var encodedText = '&#68;&#101;&#115;&#105;&#103;&#110;&#32;&#98;&#121;&#32;&#80;&#97;&#110;&#98;&#97;&#112;';
   var footer = document.createElement("a");
