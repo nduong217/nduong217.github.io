@@ -170,22 +170,38 @@
             </div>
         </button>
     </div>
-<audio autoplay loop>
-    <source src="nhac.mp3" type="audio/mpeg">
-    <source src="nhac1.mp3" type="audio/mpeg">
-    <source src="nhac2.mp3" type="audio/mpeg">
-    <source src="nhac3.mp3" type="audio/mpeg">
-    <source src="nhac4.mp3" type="audio/mpeg">
-    <source src="nhac5.mp3" type="audio/mpeg">
-    <source src="nhac6.mp3" type="audio/mpeg">
-    <source src="nhac7.mp3" type="audio/mpeg">
-    <source src="nhac8.mp3" type="audio/mpeg">
-    <source src="nhac9.mp3" type="audio/mpeg">
-    <source src="nhac10.mp3" type="audio/mpeg">
-    <source src="nhac11.mp3" type="audio/mpeg">
-    <source src="nhac12.mp3" type="audio/mpeg">
-    
+<audio id="background-music" autoplay loop>
+    <source src="" type="audio/mp3">
+    Trình duyệt của bạn không hỗ trợ thẻ audio.
 </audio>
+
+<script>
+    // Danh sách các bài hát
+    const tracks = [
+        "nhac1.mp3",
+        "nhac2.mp3",
+        "nhac3.mp3",
+        "nhac4.mp3",
+        "nhac5.mp3",
+        "nhac6.mp3",
+        "nhac7.mp3",
+        "nhac8.mp3",
+        "nhac9.mp3",
+        "nhac10.mp3",
+        "nhac11.mp3",
+        "nhac12.mp3",
+    ];
+
+    // Chọn bài hát ngẫu nhiên
+    const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
+
+    // Gán bài hát vào thẻ audio
+    const audioElement = document.getElementById("background-music");
+    audioElement.src = randomTrack;
+
+    // Phát nhạc sau khi tải xong
+    audioElement.play().catch(error => console.log("Tự động phát bị chặn bởi trình duyệt:", error));
+</script>
 </body>
 
 </html>
