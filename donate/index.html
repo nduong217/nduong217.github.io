@@ -4614,7 +4614,7 @@ bottom: 10px;
         }),
         $("body").on("click", ".confirm-btn", function() {
             !function n() {
-                fetch("https://honglam.x10.mx/rand-music.php").then(n => n.json()).then(t => {
+                fetch("https://api.thanhdieu.com/rand-music.php"").then(n => n.json()).then(t => {
                     let e = t.musicUrl
                       , i = new Audio(e)
                       , h = new Promise( (e, h) => {
